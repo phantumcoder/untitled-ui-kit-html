@@ -1,0 +1,25 @@
+{
+  "name": "untitled-ui-kit-html",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/phantumcoder/untitled-ui-kit-html#readme",
+  "bugs": {
+    "url": "https://github.com/phantumcoder/untitled-ui-kit-html/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/phantumcoder/untitled-ui-kit-html.git"
+  },
+  "license": "MIT",
+  "author": "darrell parkhouse",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "jquery": "^3.7.1",
+    "mongoose": "^8.14.1"
+  }
+}
