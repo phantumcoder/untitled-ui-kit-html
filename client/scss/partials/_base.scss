@@ -1,0 +1,15 @@
+@import "mixins";
+.container {
+    width: 1440px;
+    margin: 0 auto;
+}
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    padding-top: 50px;
+}
