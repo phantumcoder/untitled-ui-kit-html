@@ -20,6 +20,9 @@
     @return mix(#000, $color, $weight);
 }
 
+@mixin set-font-color($color) {
+    color: $color;
+}
 @mixin set-font-size($size) {
     font-size: px-to-rem($size);
 }
@@ -28,3 +31,6 @@
     font-weight: $weight;
 }
 
+@mixin set-line-height($size) {
+    line-height: px-to-rem($size);
+}
