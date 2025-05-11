@@ -1,0 +1,30 @@
+@mixin display($type) {
+    @if $type == 'flex' {
+        display: flex;
+    } @else if $type == 'table' {
+        display: table;
+    } @else if $type == 'grid' {
+        display: grid;
+    }
+}
+
+@function px-to-rem($size) {
+    @return calc($size / 16) * 1rem;
+}
+
+@function tint-color($color, $weight) {
+    @return mix(#fff, $color, $weight);
+}
+
+@function shade-color($color, $weight) {
+    @return mix(#000, $color, $weight);
+}
+
+@mixin set-font-size($size) {
+    font-size: px-to-rem($size);
+}
+
+@mixin set-font-weight($weight) {
+    font-weight: $weight;
+}
+
