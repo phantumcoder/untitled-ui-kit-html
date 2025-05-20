@@ -1,0 +1,62 @@
+@import "vars";
+@import "mixins";
+
+/***** typography styles *****/
+.display-2xl {
+    @include set-font-size(72);
+    @include set-line-height(90);
+    @include set-font-color($clr-heading-text);
+
+}
+
+.display-xl {
+    @include set-font-size(60);
+    @include set-line-height(72);
+    @include set-font-color($clr-heading-text);
+}
+
+.display-lg {
+    @include set-font-size(48);
+    //@include set-line-height(48);
+    @include set-font-color($clr-heading-text);
+}
+
+.display-md {
+    @include set-font-size(36);
+    @include set-line-height(44);
+    @include set-font-color($clr-heading-text);
+}
+
+.display-sm {
+    @include set-font-size(30);
+    @include set-line-height(38);
+    @include set-font-color($clr-heading-text);
+}
+
+.display-xs {
+    @include set-font-size(24);
+    @include set-line-height(32);
+    @include set-font-color($clr-heading-text);
+}
+
+.text-xl {
+
+}
+
+.supportive-text {
+    @include set-font-color($clr-primary-500);
+    text-transform: capitalize;
+    font-weight: bold;
+    margin-bottom: 16px;
+}
+
+.semi-bold {
+    @include set-font-weight(600);
+}
+
+p.large-text {
+    @include set-font-size(20);
+    @include set-font-weight(normal);
+    @include set-font-color(#535862);
+    @include set-line-height(30);
+}
