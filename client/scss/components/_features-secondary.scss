@@ -1,0 +1,12 @@
+.features-secondary {
+    background-color: #fafafa;
+    padding: 96px 0;
+
+    .display-lg {
+        &:first-letter {
+            text-transform: capitalize;
+        }
+    }
+
+
+}
