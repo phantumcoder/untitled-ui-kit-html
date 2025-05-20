@@ -1,0 +1,99 @@
+@import "../partials/mixins";
+@import "../partials/vars";
+.pricing {
+    padding: 96px 0;
+    .pricing-tables {
+        @include display('flex');
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+        margin-top: 96px;
+        .pricing-table {
+            background-color: $clr-light-text;
+            border: 1px solid $clr-base-border;
+            box-shadow: 0px 12px 16px -4px rgba(10, 13, 18, 0.08),
+                        0px 4px 6px -2px rgba(10, 13, 18, 0.03),
+                        0px 2px 2px -1px rgba(10, 13, 18, 0.04);
+
+            border-radius: 8px;
+            width: 384px;
+            overflow: hidden;
+            padding-bottom: 40px;
+            .header {
+                padding: 40px 32px 32px 32px;
+                text-align: center;
+
+                .price {
+                    @include set-font-size(48);
+                    @include set-font-weight(bold);
+                }
+
+                .plan-title {
+                    @include set-font-size(20);
+                    @include set-font-color($clr-heading-text);
+                    @include set-font-weight(bold);
+                    text-transform: capitalize;
+
+                }
+
+                .dark-supportive-text {
+                    @include set-font-size(16);
+                    @include set-font-weight(bold);
+                }
+            }
+
+            ul {
+                list-style: none;
+                margin: 0;
+                padding: 0 32px 0 32px;
+                text-align: left;
+            }
+
+            li {
+                @include display('flex');
+                @include set-font-size(16);
+                @include set-font-color(#535868);
+                margin-bottom: 16px;
+                .icon {
+                    margin-right: 10px;
+                }
+            }
+
+            .button-group {
+                padding: 0 32px;
+                @include display('flex');
+                flex-direction: column;
+                gap: 16px;
+                margin-top: 25px;
+                .primary-btn {
+                    background-color: $clr-primary-500;
+                    border: none;
+                    @include set-font-size(16);
+                    padding:10px 0;
+                    color: white;
+                    text-transform: capitalize;
+
+                }
+
+                .secondary-btn {
+                    background-color: #fff;
+                    border: 1px solid $clr-base-border;
+                    padding: 10px 0;
+                    @include set-font-size(16);
+                    text-transform: capitalize;
+                    color: #414653;
+                }
+
+                .primary-btn,
+                .secondary-btn {
+                    border-radius: 8px;
+
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}
