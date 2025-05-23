@@ -1,0 +1,37 @@
+@import "../partials/vars";
+.primary-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 64px 0 32px 0;
+    align-self: stretch;
+    border-bottom: 1px solid $clr-base-border;
+
+
+    .col-header {
+        margin-bottom: 16px;
+        text-transform: capitalize;
+        font-weight: bold;
+    }
+    ul {
+        list-style: none;
+
+        li {
+            margin-bottom: 12px;
+        }
+        a {
+            text-decoration: none;
+            color: #535862;
+            text-transform: capitalize;
+        }
+    }
+
+    .badge-secondary {
+        border: 1px solid $clr-base-border;
+        padding: 0 6px;
+        font-size: 14px;
+        color: #535862;
+        border-radius: 4px;
+        text-transform: capitalize;
+    }
+}
