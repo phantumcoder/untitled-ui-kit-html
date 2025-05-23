@@ -1,1 +1,12 @@
 @import "partials/_vars.scss";
+@import "partials/_base.scss";
+@import "partials/_mixins.scss";
+@import "partials/_typography.scss";
+
+@import "components/_pricing-tables.scss";
+@import "components/_header.scss";
+@import "components/_features-secondary.scss";
+@import "components/_frequently-asked-questions";
+@import "components/footer";
+@import "components/post-footer";
+@import "icons";
