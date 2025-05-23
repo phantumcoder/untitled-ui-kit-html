@@ -1,1 +1,60 @@
+@import "mixins";
+
 $clr-base-border: #d4d5d9;
+
+//- primary colors
+$clr-purple: #9e77ed;
+$clr-red: #f04438;
+$clr-orange: #f79009;
+$clr-green: #17b26a;
+
+$clr-light-text: #fff;
+
+$clr-primary-25:  tint-color($clr-purple, 95%);
+$clr-primary-50:  tint-color($clr-purple, 90%);
+$clr-primary-100: tint-color($clr-purple, 80%);
+$clr-primary-200: tint-color($clr-purple, 60%);
+$clr-primary-300: tint-color($clr-purple, 40%);
+$clr-primary-400: tint-color($clr-purple, 20%);
+$clr-primary-500: $clr-purple;
+$clr-primary-600: shade-color($clr-purple, 20%);
+$clr-primary-700: shade-color($clr-purple, 40%);
+$clr-primary-800: shade-color($clr-purple, 60%);
+$clr-primary-900: shade-color($clr-purple, 80%);
+
+$clr-error-25:  tint-color($clr-red, 95%);
+$clr-error-50:  tint-color($clr-red, 90%);
+$clr-error-100: tint-color($clr-red, 80%);
+$clr-error-200: tint-color($clr-red, 60%);
+$clr-error-300: tint-color($clr-red, 40%);
+$clr-error-400: tint-color($clr-red, 20%);
+$clr-error-500: $clr-red;
+$clr-error-600: shade-color($clr-red, 20%);
+$clr-error-700: shade-color($clr-red, 40%);
+$clr-error-800: shade-color($clr-red, 60%);
+$clr-error-900: shade-color($clr-red, 80%);
+
+$clr-warning-25: tint-color($clr-orange, 95%);
+$clr-warning-50: tint-color($clr-orange, 90%);
+$clr-warning-100: tint-color($clr-orange, 80%);
+$clr-warning-200: tint-color($clr-orange, 60%);
+$clr-warning-300: tint-color($clr-orange, 40%);
+$clr-warning-400: tint-color($clr-orange, 20%);
+$clr-warning-500: $clr-orange;
+$clr-warning-600: shade-color($clr-orange, 20%);
+$clr-warning-700: shade-color($clr-orange, 40%);
+$clr-warning-800: shade-color($clr-orange, 60%);
+$clr-warning-900: shade-color($clr-orange, 80%);
+
+$clr-success-100: tint-color($clr-green, 80%);
+$clr-success-200: tint-color($clr-green, 60%);
+$clr-success-300: tint-color($clr-green, 40%);
+$clr-success-400: tint-color($clr-green, 20%);
+$clr-success-500: $clr-green;
+$clr-success-600: shade-color($clr-green, 20%);
+$clr-success-700: shade-color($clr-green, 40%);
+$clr-success-800: shade-color($clr-green, 60%);
+$clr-success-900: shade-color($clr-green, 80%);
+
+//- secondary colors
+$clr-heading-text: #181d27;
