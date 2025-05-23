@@ -1,0 +1,18 @@
+.post-footer {
+    padding: 20px 0;
+
+    .logo {
+        display: flex;
+        align-items: center;
+        .logo-text {
+            font-size: 20px;
+            text-transform: capitalize;
+            margin-left: 10px;
+
+        }
+    }
+
+    .copyright {
+        color: #717680
+    }
+}
