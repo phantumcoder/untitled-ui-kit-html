@@ -1,0 +1,33 @@
+.faq {
+    padding: 96px 0;
+
+    .large-text {
+        margin-top: 16px;
+    }
+
+    .questions {
+        margin-top: 64px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .question {
+            width: 384px;
+
+            .title {
+                font-size: 16px;
+                font-weight: bold;
+            }
+
+            &.last {
+                margin-top: 32px;
+            }
+
+            .desc {
+                color: #535862;
+                font-size: 16px;
+                margin-top: 8px;
+                line-height: 24px;
+            }
+        }
+    }
+}
