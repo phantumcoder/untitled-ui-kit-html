@@ -42,6 +42,9 @@ const get_all_users = async (db, collectionName, query = {}) => {
         console.log(`attempting to get all the users from collection: ${collectionName} with query:`, query)
         const users = await collection.find(query).toArray()
 
+        console.log(`found ${users.length} users`)
+        return users
+
     } catch (err) {
         console.error(err);
         throw err;
