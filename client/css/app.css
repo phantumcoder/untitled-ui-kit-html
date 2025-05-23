@@ -276,6 +276,84 @@ header.primary-header nav.secondary a.primary-btn-link {
   text-transform: capitalize;
 }
 
+.faq {
+  padding: 96px 0;
+}
+.faq .large-text {
+  margin-top: 16px;
+}
+.faq .questions {
+  margin-top: 64px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.faq .questions .question {
+  width: 384px;
+}
+.faq .questions .question .title {
+  font-size: 16px;
+  font-weight: bold;
+}
+.faq .questions .question.last {
+  margin-top: 32px;
+}
+.faq .questions .question .desc {
+  color: #535862;
+  font-size: 16px;
+  margin-top: 8px;
+  line-height: 24px;
+}
+
+.primary-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 64px 0 32px 0;
+  align-self: stretch;
+  border-bottom: 1px solid #d4d5d9;
+}
+.primary-footer .col-header {
+  margin-bottom: 16px;
+  text-transform: capitalize;
+  font-weight: bold;
+}
+.primary-footer ul {
+  list-style: none;
+}
+.primary-footer ul li {
+  margin-bottom: 12px;
+}
+.primary-footer ul a {
+  text-decoration: none;
+  color: #535862;
+  text-transform: capitalize;
+}
+.primary-footer .badge-secondary {
+  border: 1px solid #d4d5d9;
+  padding: 0 6px;
+  font-size: 14px;
+  color: #535862;
+  border-radius: 4px;
+  text-transform: capitalize;
+}
+
+.post-footer {
+  padding: 20px 0;
+}
+.post-footer .logo {
+  display: flex;
+  align-items: center;
+}
+.post-footer .logo .logo-text {
+  font-size: 20px;
+  text-transform: capitalize;
+  margin-left: 10px;
+}
+.post-footer .copyright {
+  color: #717680;
+}
+
 .check-icon {
   background: url("../img/check-icon.svg") no-repeat;
   width: 24px;
