@@ -1,3 +1,5 @@
+@import "../partials/vars";
+
 .features-secondary {
     background-color: #fafafa;
     padding: 96px 0;
@@ -8,5 +10,67 @@
         }
     }
 
+    .large-text {
+        margin-bottom: 64px;
+    }
 
+    .features {
+        display: flex;
+        gap: 32px;
+
+        &.last {
+            margin-top: 32px;
+        }
+
+        .feature {
+            width: 384px;
+
+
+            .title {
+                font-size: 18px;
+                font-weight: bold;
+                margin: 16px 0;
+                text-transform: capitalize;
+            }
+            .icon {
+                width: 48px;
+                height: 48px;
+                border: 1px solid $clr-base-border;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 10px;
+
+                &.no-border {
+                    border: none;
+                    padding: 0;
+                    width: 20px;
+                    height: 20px;
+                    margin-top: 3px;
+                    margin-left: 6px;
+                }
+            }
+
+            p.description {
+
+                color: #535862;
+
+            }
+
+
+            .learn-more {
+                display: flex;
+                margin-top: 18px;
+
+                a {
+                    text-decoration: none;
+                    color: $clr-primary-600;
+                    font-weight: bold;
+                    &:first-letter {
+                        text-transform: capitalize;
+                    }
+                }
+            }
+        }
+    }
 }
