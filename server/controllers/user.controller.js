@@ -22,6 +22,14 @@ const create_user = async (db, collectionName, document) => {
     }
 }
 
+/**
+ * retrieves a single user by their id from the specified collection
+ *
+ * @param db
+ * @param collectionName
+ * @param userId
+ * @returns {Promise<*|null>}
+ */
 const get_user_by_id = async (db, collectionName, userId) => {
     try {
         const collection = db.collection(collectionName)
