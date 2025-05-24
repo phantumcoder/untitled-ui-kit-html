@@ -56,6 +56,15 @@ const get_user_by_id = async (db, collectionName, userId) => {
     }
 };
 
+/**
+ * retrieves all users from the specified collection, optionally matching a query
+ *
+ * @param db
+ * @param collectionName
+ * @param query
+ * @returns {Promise<*>}
+ */
+
 const get_all_users = async (db, collectionName, query = {}) => {
     try {
         const collection = db.collection(collectionName)
@@ -71,6 +80,14 @@ const get_all_users = async (db, collectionName, query = {}) => {
     }
 }
 
+/**
+ * update a user by their id
+ * @param db
+ * @param collectionName
+ * @param userId
+ * @param updateData
+ * @returns {Promise<{acknowledged: boolean, matchedCount: number, modifiedCount: number, error: string}|*>}
+ */
 const update_user_by_id = async (db, collectionName, userId, updateData) => {
     try {
         const collection = db.collection(collectionName)
@@ -101,8 +118,32 @@ const update_user_by_id = async (db, collectionName, userId, updateData) => {
     }
 }
 
+const delete_user_by_id = async (db, collectionName, userId) => {
+    try {
+        const collection = db.collection(collectionName)
+
+        if (!ObjectId.isValid(userId)) {
+            console.error(`Invalid user ID format for delete: ${userId}`)
+            return {
+                acknowledged: false,
+                deletedCount: 0,
+                error: "invalid id format"
+            };
+        }
+
+        console.log(`attempting to delete user ID: ${userId} from collection: ${collectionName}`)
+        const result = await collection.deleteOne({_id: new ObjectId(userId)})
+
+        console.log('user delete result', result)
+        return result;
+    } catch (err) {
+        console.error(`error deleting user by id: ${userId} from ${collectionName}`)
+    }
+}
 module.exports = {
     create_user,
     get_user_by_id,
-    get_all_users
+    get_all_users,
+    update_user_by_id,
+    delete_user_by_id
 }
