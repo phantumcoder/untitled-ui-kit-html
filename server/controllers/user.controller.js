@@ -1,9 +1,21 @@
 const { ObjectId } = require('mongodb');
 
+/**
+ * create a new user document in the specified collection
+ *
+ * @param {object} db  - db instance
+ * @param collectionName - name of the collection
+ * @param document - the document to insert
+ * @returns {Promise<*>}
+ */
 const create_user = async (db, collectionName, document) => {
     try {
-        const collection = db.collection(collectionName)
-        return await collection.insertOne(document)
+        const collection = db.collection(collectionName);
+        console.log(`attempting to create user in collection: ${collectionName}`)
+
+        const result = await collection.insertOne(document);
+        console.log('user created successfully', result)
+        return result;
     } catch (err) {
         console.error(err);
         throw err;
@@ -51,7 +63,38 @@ const get_all_users = async (db, collectionName, query = {}) => {
     }
 }
 
+const update_user_by_id = async (db, collectionName, userId, updateData) => {
+    try {
+        const collection = db.collection(collectionName)
+
+        if (!ObjectId.isValid(userId)) {
+            console.error(`Invalid user ID format for update: ${userId}`)
+            return {
+                acknowledged: false,
+                matchedCount: 0,
+                modifiedCount: 0,
+                error: "invalid id format"
+            };
+        }
+
+        const { _id, ...dataToUpdate} = updateData
+
+        console.log(
+            `attempting to update user ID: ${userId} in collection: ${collectionName} with data: `, dataToUpdate)
+
+        const result = await collection.updateOne({_id: new ObjectId(userId)}, { $set: dataToUpdate})
+
+        console.log('user update result', result)
+        return result;
+
+    } catch (err) {
+        console.error(`error udating user by id: ${userId}`)
+        throw err;
+    }
+}
+
 module.exports = {
     create_user,
-    get_user_by_id
+    get_user_by_id,
+    get_all_users
 }
