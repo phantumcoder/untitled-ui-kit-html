@@ -12,12 +12,13 @@
   },
   "license": "MIT",
   "author": "darrell parkhouse",
-  "type": "commonjs",
+  "type": "module",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
+    "@types/mongodb": "^4.0.6",
     "express": "^5.1.0",
     "jquery": "^3.7.1",
     "mongodb": "^6.16.0",
