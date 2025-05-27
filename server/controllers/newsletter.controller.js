@@ -1,8 +1,13 @@
+import NewsletterSubscription from "../models/newsletter.js"; // Often good practice to include .js with ES Modules in Node
 
-import Newsletter from '../models/newsletter'
-const newSub = new Newsletter({});
+NewsletterSubscription.write = async  () => {
+    try {
+        await this.save();
+    } catch (error) {
+        throw new Error('Error saving newsletter subscription: ' + error.message);
+    }
+};
 
-// rewrite the above code with the changes mentioned above
 const signup = async (req, res) => {
     try {
         const { email } = req.body;
@@ -15,8 +20,8 @@ const signup = async (req, res) => {
             });
         }
 
-        // Check if the email is already subscribed
-        const existing = await Newsletter.findOne({ email }, null, null);
+        // Check if the email is already subscribed (Using the correct model name)
+        const existing = await NewsletterSubscription.findOne({ email }); // Use newsletterSubscription and simplified findOne
         if (existing) {
             return res.status(409).send({
                 message: 'Email already exists'
@@ -24,11 +29,9 @@ const signup = async (req, res) => {
         }
 
         // Create a new subscription
-        const newSub = new Newsletter({ email });
+        const newSub = new NewsletterSubscription({ email });
         await newSub.write();
 
-        // Placeholder for sending confirmation email
-        // await sendConfirmationEmail(email);
 
         return res.status(201).send({
             message: 'Successfully subscribed to newsletter',
@@ -43,4 +46,4 @@ const signup = async (req, res) => {
     }
 }
 
-module.exports = signup;
+module.exports = signup; // Use ES Module export
