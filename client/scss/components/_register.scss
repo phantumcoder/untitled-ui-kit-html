@@ -1,0 +1,134 @@
+@import "../partials/vars";
+
+.register-card-one {
+    width: 360px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 40px;
+    box-shadow: 0px 24px 48px -12px rgba(10, 13, 18, 0.18), 0px 4px 4px -2px rgba(10, 13, 18, 0.04);
+    font-family: "Inter", sans-serif;
+
+    .icon {
+        width: 38px;
+        margin: 0 auto;
+    }
+
+    .title {
+        text-align: center;
+
+        &:first-letter {
+            text-transform: capitalize;
+        }
+    }
+
+    .form-text {
+        text-align: center;
+        font-size: 14px;
+    }
+
+    label {
+        display: block;
+        font-size: 14px;
+        font-weight: bold;
+        color: #414653;
+        margin-bottom: 6px;
+        text-transform: capitalize;
+    }
+
+    .tab-group {
+        display: flex;
+        list-style: none;
+        border-radius: 4px;
+        border: 1px solid $clr-base-border;
+        background-color: #fafafa;
+        text-transform: capitalize;
+        overflow: hidden;
+
+        font-weight: bold;
+        margin: 20px 0;
+        li {
+            flex: 1;
+            text-align: center;
+            font-size: 14px;
+            color: #414651;
+            padding: 8px 0; // Added padding for better click area
+
+            &.active {
+                background-color: #fff;
+                box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.10);
+            }
+        }
+    }
+
+    .register-form-one {
+        .form-group {
+            margin-bottom: 20px; // Reduced margin for better spacing
+
+            // Removed unnecessary nth-child selector as all form groups should have the same spacing
+        }
+
+        input {
+            border: 1px solid $clr-base-border;
+            padding: 10px 14px;
+            width: 100%;
+            border-radius: 4px; // Added border-radius for consistent styling
+            &::placeholder { // Changed from -webkit-input-placeholder to standard placeholder
+                text-transform: capitalize;
+            }
+        }
+    }
+
+    .button-group {
+        display: flex;
+        flex-direction: column;
+        gap: 10px; // Added gap between buttons
+        margin: 20px 0;
+    }
+
+    .primary-btn {
+        background-color: $clr-primary-600;
+        color: #fff;
+        border: none;
+        padding: 10px 16px; // Added horizontal padding
+        font-size: 16px;
+        text-transform: capitalize;
+        font-weight: bold;
+        font-family: inherit;
+        border-radius: 4px; // Added border-radius
+        cursor: pointer; // Added cursor pointer
+    }
+
+    .secondary-btn {
+        background-color: transparent; // Set background to transparent
+        border: 1px solid $clr-base-border; // Added border
+        color: #414653; // Set text color
+        padding: 10px 16px; // Added horizontal padding
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        font-size: 14px;
+        font-weight: bold;
+        font-family: inherit;
+        border-radius: 4px; // Added border-radius
+        cursor: pointer; // Added cursor pointer
+        text-transform: capitalize;
+        svg {
+            margin-right: 10px;
+        }
+    }
+
+    .small-form-text {
+        font-size: 14px;
+        text-transform: capitalize;
+        text-align: center;
+        color: #535862;
+        font-weight: bold;
+        .primary-link {
+            color: $clr-primary-600;
+            text-decoration: none;
+            font-weight: bold;
+
+        }
+    }
+}
