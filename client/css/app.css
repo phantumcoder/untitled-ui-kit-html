@@ -19,6 +19,13 @@ body {
   font-family: "Inter", sans-serif;
   padding-top: 20px;
 }
+body.register-body {
+  background-color: #fafafa;
+}
+
+input {
+  border: none;
+}
 
 /***** typography styles *****/
 .display-2xl {
@@ -84,6 +91,7 @@ p.large-text {
   align-items: center;
   text-align: center;
   margin-top: 96px;
+  position: relative;
 }
 .pricing .pricing-tables .pricing-table {
   background-color: #fff;
@@ -157,6 +165,11 @@ p.large-text {
 .pricing .pricing-tables .pricing-table .button-group .primary-btn:hover,
 .pricing .pricing-tables .pricing-table .button-group .secondary-btn:hover {
   cursor: pointer;
+}
+.pricing .pricing-tables .call-out {
+  position: absolute;
+  top: -35px;
+  left: 275px;
 }
 
 /***** header styles *****/
@@ -354,6 +367,120 @@ header.primary-header nav.secondary a.primary-btn-link {
   color: #717680;
 }
 
+.register-card-one {
+  width: 360px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 40px;
+  box-shadow: 0px 24px 48px -12px rgba(10, 13, 18, 0.18), 0px 4px 4px -2px rgba(10, 13, 18, 0.04);
+  font-family: "Inter", sans-serif;
+}
+.register-card-one .icon {
+  width: 38px;
+  margin: 0 auto;
+}
+.register-card-one .title {
+  text-align: center;
+}
+.register-card-one .title:first-letter {
+  text-transform: capitalize;
+}
+.register-card-one .form-text {
+  text-align: center;
+  font-size: 14px;
+}
+.register-card-one label {
+  display: block;
+  font-size: 14px;
+  font-weight: bold;
+  color: #414653;
+  margin-bottom: 6px;
+  text-transform: capitalize;
+}
+.register-card-one .tab-group {
+  display: flex;
+  list-style: none;
+  border-radius: 4px;
+  border: 1px solid #d4d5d9;
+  background-color: #fafafa;
+  text-transform: capitalize;
+  overflow: hidden;
+  font-weight: bold;
+  margin: 20px 0;
+}
+.register-card-one .tab-group li {
+  flex: 1;
+  text-align: center;
+  font-size: 14px;
+  color: #414651;
+  padding: 8px 0;
+}
+.register-card-one .tab-group li.active {
+  background-color: #fff;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+}
+.register-card-one .register-form-one .form-group {
+  margin-bottom: 20px;
+}
+.register-card-one .register-form-one input {
+  border: 1px solid #d4d5d9;
+  padding: 10px 14px;
+  width: 100%;
+  border-radius: 4px;
+}
+.register-card-one .register-form-one input::placeholder {
+  text-transform: capitalize;
+}
+.register-card-one .button-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 20px 0;
+}
+.register-card-one .primary-btn {
+  background-color: #7e5fbe;
+  color: #fff;
+  border: none;
+  padding: 10px 16px;
+  font-size: 16px;
+  text-transform: capitalize;
+  font-weight: bold;
+  font-family: inherit;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.register-card-one .secondary-btn {
+  background-color: transparent;
+  border: 1px solid #d4d5d9;
+  color: #414653;
+  padding: 10px 16px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  font-weight: bold;
+  font-family: inherit;
+  border-radius: 4px;
+  cursor: pointer;
+  text-transform: capitalize;
+}
+.register-card-one .secondary-btn svg {
+  margin-right: 10px;
+}
+.register-card-one .small-form-text {
+  font-size: 14px;
+  text-transform: capitalize;
+  text-align: center;
+  color: #535862;
+  font-weight: bold;
+}
+.register-card-one .small-form-text .primary-link {
+  color: #7e5fbe;
+  text-decoration: none;
+  font-weight: bold;
+}
+
 .check-icon {
   background: url("../img/check-icon.svg") no-repeat;
   width: 24px;
@@ -376,4 +503,16 @@ header.primary-header nav.secondary a.primary-btn-link {
   background: url("../img/learn-more-icon.svg") no-repeat;
   width: 20px;
   height: 20px;
+}
+
+.google-icon {
+  background: url("../img/google-icon.svg") no-repeat;
+  width: 24px;
+  height: 24px;
+}
+
+.call-out {
+  background: url("../img/callout.png") no-repeat;
+  width: 153px;
+  height: 54px;
 }
