@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const newsletterSubscription = new Schema ({
+const NewsletterSubscription = new Schema ({
     email: {
         type: String,
         required: [true, 'email address is required'],
@@ -46,5 +46,8 @@ const newsletterSubscription = new Schema ({
         required: [true, 'source is required'],
     }
 })
+
+// create the write method
+
 
 module.exports = mongoose.model('NewsletterSubscription', newsletterSubscription);
