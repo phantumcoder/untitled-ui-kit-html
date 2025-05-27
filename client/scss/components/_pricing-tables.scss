@@ -9,6 +9,7 @@
         align-items: center;
         text-align: center;
         margin-top: 96px;
+        position: relative;
         .pricing-table {
             background-color: $clr-light-text;
             border: 1px solid $clr-base-border;
@@ -94,6 +95,12 @@
                     }
                 }
             }
+        }
+
+        .call-out {
+            position: absolute;
+            top: -35px;
+            left: 275px;
         }
     }
 }
