@@ -1,5 +1,20 @@
 const { ObjectId } = require('mongodb');
 
+const validateUserInput = (document) => {
+    const { email, firstName, lastName } = document;
+
+    if (!email || !email.includes('@')) {
+        throw new Error('Invalid email format');
+    }
+
+    if (!firstName || typeof firstName !== 'string') {
+        throw new Error('First name is required and must be a string');
+    }
+
+    if (!lastName || typeof lastName !== 'string') {
+        throw new Error('Last name is required and must be a string');
+    }
+}
 /**
  * create a new user document in the specified collection
  *
@@ -21,6 +36,7 @@ const create_user = async (db, collectionName, document) => {
         throw err;
     }
 }
+
 
 /**
  * retrieves a single user by their id from the specified collection
@@ -113,7 +129,7 @@ const update_user_by_id = async (db, collectionName, userId, updateData) => {
         return result;
 
     } catch (err) {
-        console.error(`error udating user by id: ${userId}`)
+        console.error(`error updating user by id: ${userId}`)
         throw err;
     }
 }
@@ -145,5 +161,8 @@ module.exports = {
     get_user_by_id,
     get_all_users,
     update_user_by_id,
-    delete_user_by_id
+    delete_user_by_id,
+    validateUserInput
 }
+
+ 
