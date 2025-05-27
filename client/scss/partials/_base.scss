@@ -18,4 +18,12 @@
 body {
     font-family: "Inter", sans-serif;
     padding-top: 20px;
+
+    &.register-body {
+        background-color: #fafafa;
+    }
+}
+
+input {
+    border: none;
 }
