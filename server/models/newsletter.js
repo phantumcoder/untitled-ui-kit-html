@@ -50,4 +50,4 @@ const NewsletterSubscription = new Schema ({
 // create the write method
 
 
-module.exports = mongoose.model('NewsletterSubscription', newsletterSubscription);
+module.exports = mongoose.model('NewsletterSubscription', NewsletterSubscription);
