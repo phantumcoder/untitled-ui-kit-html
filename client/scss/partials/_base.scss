@@ -22,7 +22,13 @@ body {
     &.register-body {
         background-color: #fafafa;
     }
+
+    &.mobile {
+        display: flex;
+        flex-direction: column;
+    }
 }
+
 
 input {
     border: none;
