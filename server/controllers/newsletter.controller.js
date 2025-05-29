@@ -1,12 +1,7 @@
 import NewsletterSubscription from "../models/newsletter.js"; // Often good practice to include .js with ES Modules in Node
-
-NewsletterSubscription.write = async  () => {
-    try {
-        await this.save();
-    } catch (error) {
-        throw new Error('Error saving newsletter subscription: ' + error.message);
-    }
-};
+ 
+// q: does this function work?
+// a: Yes, this function is designed to handle newsletter signup requests by validating the email, checking for duplicates, and saving new subscriptions.
 
 const signup = async (req, res) => {
     try {
@@ -30,7 +25,7 @@ const signup = async (req, res) => {
 
         // Create a new subscription
         const newSub = new NewsletterSubscription({ email });
-        await newSub.write();
+        await newSub.save();
 
 
         return res.status(201).send({
