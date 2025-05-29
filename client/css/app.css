@@ -522,9 +522,80 @@ header.primary-header nav.secondary a.primary-btn-link {
 .mobile .small-text {
   font-size: 14px;
   color: #535862;
+  margin-top: 6px;
 }
 .mobile .small-text:first-letter {
   text-transform: capitalize;
+}
+.mobile .billing-mobile-card {
+  border: 1px solid #d4d5d9;
+  padding: 20px;
+  margin-top: 32px;
+}
+.mobile .billing-mobile-card .card-header .title {
+  color: #181d27;
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+.mobile .billing-mobile-card .card-header .title:first-letter {
+  text-transform: capitalize;
+}
+.mobile .billing-mobile-card .card-header .primary-badge {
+  color: #5f478e;
+  font-size: 0.875rem;
+  padding: 2px 10px;
+  background-color: #f9f5ff;
+  border: 1px solid #b192f1;
+  border-radius: 16px;
+  text-transform: capitalize;
+}
+.mobile .billing-mobile-card .card-body .usage {
+  margin-top: 24px;
+  font-size: 0.875rem;
+  color: #181027;
+  font-weight: normal;
+}
+.mobile .billing-mobile-card .card-body .usage .progress-bg {
+  width: 100%;
+  height: 8px;
+  background-color: #e9eaeb;
+  margin-top: 12px;
+}
+.mobile .billing-mobile-card .card-body .usage .progress-bg .progress {
+  width: 70%;
+  height: 8px;
+  border-radius: 0 6px 6px 0;
+  background-color: #b192f1;
+}
+.mobile .billing-mobile-card .card-body-payment {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border: 1px solid #d4d5d9;
+  padding: 16px;
+  margin-top: 20px;
+}
+.mobile .billing-mobile-card .card-body-payment .small-text {
+  margin-bottom: 20px;
+}
+.mobile .billing-mobile-card .card-body-payment .middle {
+  font-size: 0.875rem;
+  display: flex;
+  flex-direction: column;
+}
+.mobile .billing-mobile-card .card-body-payment .middle .email-container {
+  display: flex;
+}
+.mobile .billing-mobile-card .card-body-payment .middle .email-container .email {
+  margin-right: 6px;
+}
+.mobile .billing-mobile-card .card-body-payment .right .secondary-btn {
+  background-color: #fff;
+  border: 1px solid #d4d5d9;
+  padding: 10px 16px;
+}
+.mobile .billing-mobile-card .card-footer {
+  border-top: 1px solid #d4d5d9;
 }
 
 .check-icon {
@@ -565,6 +636,12 @@ header.primary-header nav.secondary a.primary-btn-link {
 
 .mobile-menu {
   background: url("../img/mobile-menu.svg") no-repeat;
+  width: 24px;
+  height: 24px;
+}
+
+.small-email-icon {
+  background: url("../img/small-email-icon.svg") no-repeat;
   width: 24px;
   height: 24px;
 }
