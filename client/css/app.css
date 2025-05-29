@@ -22,6 +22,10 @@ body {
 body.register-body {
   background-color: #fafafa;
 }
+body.mobile {
+  display: flex;
+  flex-direction: column;
+}
 
 input {
   border: none;
@@ -481,6 +485,48 @@ header.primary-header nav.secondary a.primary-btn-link {
   font-weight: bold;
 }
 
+.mobile-container {
+  width: 375px;
+  background-color: #ffffff;
+  margin-left: 50px;
+  border: 1px solid #d4d5d9;
+}
+
+.mobile header {
+  width: 100%;
+  height: 64px;
+  background-color: #fff;
+  padding: 16px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #d4d5d9;
+}
+.mobile header .logo {
+  display: flex;
+}
+.mobile header .logo .logo-text {
+  font-size: 18px;
+  line-height: 36px;
+  margin-left: 10px;
+  text-transform: capitalize;
+}
+.mobile main {
+  padding: 16px;
+}
+.mobile main .section-title {
+  font-size: 20px;
+  text-transform: capitalize;
+}
+.mobile .small-text {
+  font-size: 14px;
+  color: #535862;
+}
+.mobile .small-text:first-letter {
+  text-transform: capitalize;
+}
+
 .check-icon {
   background: url("../img/check-icon.svg") no-repeat;
   width: 24px;
@@ -515,4 +561,10 @@ header.primary-header nav.secondary a.primary-btn-link {
   background: url("../img/callout.png") no-repeat;
   width: 153px;
   height: 54px;
+}
+
+.mobile-menu {
+  background: url("../img/mobile-menu.svg") no-repeat;
+  width: 24px;
+  height: 24px;
 }
