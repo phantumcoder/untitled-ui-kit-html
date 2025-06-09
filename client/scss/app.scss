@@ -2,6 +2,7 @@
 @import "partials/_base.scss";
 @import "partials/_mixins.scss";
 @import "partials/_typography.scss";
+@import "partials/grid-system";
 
 @import "components/_pricing-tables.scss";
 @import "components/_header.scss";
@@ -11,4 +12,5 @@
 @import "components/post-footer";
 @import "components/register";
 @import "components/settings-billing-mobile";
+
 @import "icons";
