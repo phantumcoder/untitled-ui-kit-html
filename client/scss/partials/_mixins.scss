@@ -34,3 +34,29 @@
 @mixin set-line-height($size) {
     line-height: px-to-rem($size);
 }
+
+$bps: (
+    mobile: 768px,
+    tablet: 1024px,
+    desktop: 1200px
+);
+
+@mixin respond-to($bp) {
+    @if map-has-key($bps, $bp) {
+        @if $bp == mobile {
+            @media (max-width: #{map-get($bps, mobile) - 1}) {
+                @content;
+            }
+        } @else if $bp == tablet {
+            @media (min-width: #{map-get($bps, mobile)} and (max-width: #{map-get($bps, tablet)})) {
+                @content;
+            }
+        } @else if $bp == desktop {
+            @media (min-width: #{map-get($bps, tablet)}) and (max-width: #{map-get($bps, desktop) - 1}) {
+                @content;
+            }
+        }
+    } @else {
+        @warn "Invalid breakpoint: #{$bp}. available breakpoints: #{map-get($bps)}";
+    }
+}
