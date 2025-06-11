@@ -6,8 +6,24 @@
     box-sizing: border-box;
 }
 .container {
-    width: 1280px;
-    margin: 0 auto;
+    padding: 20px;
+
+    @include respond-to(mobile) {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    @include respond-to(tablet) {
+        padding: 20px;
+        font-size: 16px;
+    }
+
+    @include respond-to(desktop) {
+        padding: 30px;
+        font-size: 18px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
 }
 .row {
     display: flex;
