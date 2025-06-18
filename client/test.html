@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>testing</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        .box {
+            max-width: 400px;
+            font-family: "Inter", sans-serif;
+            background: white;
+            box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+            margin-top: 50px;
+            margin-left: 50px;
+            padding: 30px;
+            border-radius: 8px;
+        }
+
+        .box p {
+            color: rgba(0, 0, 0, 0.6);
+            font-weight: bold;
+            line-height: 2.0rem;
+            text-align: justify;
+        }
+
+        .box p:first-letter {
+            text-transform: capitalize;
+        }
+        .button-group {
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 20px;
+            column-gap: 20px;
+        }
+
+        .primary-btn {
+            background: purple;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+            text-transform: capitalize;
+        }
+
+        .secondary-btn {
+            background: #800000;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+            text-transform: capitalize;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        hello, username
+        <p>
+            someone send to a friend request
+        </p>
+
+
+        <div class="button-group">
+            <button class="primary-btn">accept</button>
+            <button class="secondary-btn">decline</button>
+        </div>
+    </div>
+</body>
+</html>
