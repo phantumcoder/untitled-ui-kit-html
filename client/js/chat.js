@@ -1,0 +1,1 @@
+const chatContainer = $('.chat-container');
